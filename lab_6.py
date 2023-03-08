@@ -18,6 +18,16 @@ def encode(password):
     return encoded_password
 
 
+def decode(encoded):
+    ans = ""
+
+    # reverse encoding for each character
+    for char in encoded:
+        ans += str((int(char) - 3) % 10)
+
+    return ans
+
+
 if __name__ == '__main__':
     stop = 0
     while stop != 1:
